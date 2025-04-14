@@ -1,11 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Container } from "../../../components";
+import useAppStore from "../../../store/appStore";
 
 const Home = () => {
+  const { setIsLogin } = useAppStore();
+
   return (
-    <View>
+    <Container>
       <Text>Home</Text>
-    </View>
+
+      <Button title="Logout" onPress={() => setIsLogin(false)} />
+    </Container>
   );
 };
 

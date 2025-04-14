@@ -1,12 +1,16 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
 import AppNavigation from "./src/navigation";
+import AuthContext from "./src/context/AuthContext";
+import useAppStore from "./src/store/appStore";
 
 export default function App() {
+  const { isLogin } = useAppStore();
+
   return (
     <View style={styles.container}>
-      <AppNavigation />
+      <AuthContext.Provider value={isLogin}>
+        <AppNavigation />
+      </AuthContext.Provider>
     </View>
   );
 }

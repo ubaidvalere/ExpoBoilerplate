@@ -1,19 +1,16 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStaticNavigation } from "@react-navigation/native";
 import HomeStack from "./HomeStack";
 import AuthStack from "./AuthStack";
-import { createStaticNavigation } from "@react-navigation/native";
-
-const isSignedIn = () => false;
-
-const isSignedOut = () => !isSignedIn();
+import { isSignedIn, isSignedOut } from "../context/AuthContext";
 
 const RootStack = createNativeStackNavigator({
   screens: {
-    Home: {
+    HomeStack: {
       if: isSignedIn,
       screen: HomeStack,
     },
-    SignIn: {
+    AuthStack: {
       if: isSignedOut,
       screen: AuthStack,
     },
