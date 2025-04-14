@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import AppNavigation from "./src/navigation";
-import AuthContext from "./src/context/AuthContext";
-import useAppStore from "./src/store/appStore";
+import AuthContext from "./src/contexts/AuthContext";
+import useAuthStore from "./src/store/authStore";
 
 export default function App() {
-  const { isLogin } = useAppStore();
+  const { isLogin } = useAuthStore();
 
   return (
     <View style={styles.container}>
@@ -18,6 +18,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
 });

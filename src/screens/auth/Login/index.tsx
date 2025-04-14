@@ -1,21 +1,21 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet } from "react-native";
 import React from "react";
-import { Container } from "../../../components";
-import useAppStore from "../../../store/appStore";
+import useAuthStore from "@/store/authStore";
+import { View, Text, Header } from "@/components";
 
 const Login = () => {
-  const { setIsLogin } = useAppStore();
+  const { setIsLogin } = useAuthStore();
 
   return (
-    <Container>
-      <Text>Login</Text>
+    <View style={{ flex: 1 }}>
+      <Header title="Login" hideBack />
       <Button
         title="Login"
         onPress={() => {
           setIsLogin(true);
         }}
       />
-    </Container>
+    </View>
   );
 };
 

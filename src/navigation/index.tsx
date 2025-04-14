@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createStaticNavigation } from "@react-navigation/native";
 import HomeStack from "./HomeStack";
 import AuthStack from "./AuthStack";
-import { isSignedIn, isSignedOut } from "../context/AuthContext";
+import { isSignedIn, isSignedOut } from "../contexts/AuthContext";
 
 const RootStack = createNativeStackNavigator({
   screens: {

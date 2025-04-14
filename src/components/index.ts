@@ -1,3 +1,5 @@
-import Container from "./Container";
+import Text from "./Text";
+import View from "./View";
+import Header from "./Header";
 
-export { Container };
+export { Text, View, Header };
