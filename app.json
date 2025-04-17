@@ -1,17 +1,12 @@
 {
   "expo": {
-    "name": "RNExpoBoilerplate",
-    "slug": "RNExpoBoilerplate",
+    "name": "Expo Boilerplate",
+    "slug": "Expo Boilerplate",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/images/app-icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.RNExpoBoilerplate",
@@ -19,7 +14,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/images/app-icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.RNExpoBoilerplate",
@@ -27,6 +22,32 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/Comfortaa-Bold.ttf",
+            "./src/assets/fonts/Comfortaa-Light.ttf",
+            "./src/assets/fonts/Comfortaa-Medium.ttf",
+            "./src/assets/fonts/Comfortaa-Regular.ttf",
+            "./src/assets/fonts/Comfortaa-SemiBold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./src/assets/images/splash-icon.png",
+          "dark": {
+            "image": "./src/assets/images/splash-icon.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
+    ]
   }
 }

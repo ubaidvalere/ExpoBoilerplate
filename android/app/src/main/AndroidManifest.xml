@@ -26,6 +26,8 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.anonymous.RNExpoBoilerplate"/>
         <data android:scheme="exp+rnexpoboilerplate"/>
+        <data android:scheme="exp+expo"/>
+        <data android:scheme="exp+expoboilerplate"/>
       </intent-filter>
     </activity>
   </application>

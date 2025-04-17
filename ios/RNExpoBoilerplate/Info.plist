@@ -7,7 +7,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-    <string>RNExpoBoilerplate</string>
+    <string>Expo Boilerplate</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -33,7 +33,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>exp+rnexpoboilerplate</string>
+          <string>exp+expoboilerplate</string>
         </array>
       </dict>
     </array>
@@ -50,6 +50,14 @@
       <key>NSAllowsLocalNetworking</key>
       <true/>
     </dict>
+    <key>UIAppFonts</key>
+    <array>
+      <string>Comfortaa-Bold.ttf</string>
+      <string>Comfortaa-Light.ttf</string>
+      <string>Comfortaa-Medium.ttf</string>
+      <string>Comfortaa-Regular.ttf</string>
+      <string>Comfortaa-SemiBold.ttf</string>
+    </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
     <key>UIRequiredDeviceCapabilities</key>

@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A9B10300B0404DBB4B05F7 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 537E68B34BB64596B909BBD5 /* Comfortaa-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3A28133FEB44457E8A2D4E6B /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61639CEB64070BCFACA3C /* Comfortaa-Medium.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		4110175FE3C6447B9AECA362 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64A8844D7C34EB4B4A48398 /* Comfortaa-SemiBold.ttf */; };
 		8699F5FEE7864C0D60866EF4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B7E582D0D92D3CD42B7B027E /* PrivacyInfo.xcprivacy */; };
+		963A7A5B7D6E49A3958B037A /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBBD21060CE74B4FAF8B1ECA /* Comfortaa-Light.ttf */; };
 		96905EF65AED1B983A6B3ABC /* libPods-RNExpoBoilerplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-RNExpoBoilerplate.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
+		B1EAB935E86A4BECBEE18760 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5985D60B46464B849F265EC9 /* Comfortaa-Bold.ttf */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		CDC175B0507E44939C8DCBAC /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4FAD387E504BE5A7003A11 /* noop-file.swift */; };
 /* End PBXBuildFile section */
@@ -26,12 +31,17 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNExpoBoilerplate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNExpoBoilerplate/main.m; sourceTree = "<group>"; };
 		3C0C28F4C68A43F1862D6267 /* RNExpoBoilerplate-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "RNExpoBoilerplate-Bridging-Header.h"; path = "RNExpoBoilerplate/RNExpoBoilerplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		537E68B34BB64596B909BBD5 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Comfortaa-Regular.ttf"; path = "../src/assets/fonts/Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-RNExpoBoilerplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNExpoBoilerplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5985D60B46464B849F265EC9 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Comfortaa-Bold.ttf"; path = "../src/assets/fonts/Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		5EF61639CEB64070BCFACA3C /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Comfortaa-Medium.ttf"; path = "../src/assets/fonts/Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-RNExpoBoilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNExpoBoilerplate.debug.xcconfig"; path = "Target Support Files/Pods-RNExpoBoilerplate/Pods-RNExpoBoilerplate.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-RNExpoBoilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNExpoBoilerplate.release.xcconfig"; path = "Target Support Files/Pods-RNExpoBoilerplate/Pods-RNExpoBoilerplate.release.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = RNExpoBoilerplate/SplashScreen.storyboard; sourceTree = "<group>"; };
+		B64A8844D7C34EB4B4A48398 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Comfortaa-SemiBold.ttf"; path = "../src/assets/fonts/Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
 		B7E582D0D92D3CD42B7B027E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = RNExpoBoilerplate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		CBBD21060CE74B4FAF8B1ECA /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Comfortaa-Light.ttf"; path = "../src/assets/fonts/Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE4FAD387E504BE5A7003A11 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "RNExpoBoilerplate/noop-file.swift"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RNExpoBoilerplate/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
@@ -75,6 +85,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		32E5542755FA4F7E81670DFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5985D60B46464B849F265EC9 /* Comfortaa-Bold.ttf */,
+				CBBD21060CE74B4FAF8B1ECA /* Comfortaa-Light.ttf */,
+				5EF61639CEB64070BCFACA3C /* Comfortaa-Medium.ttf */,
+				537E68B34BB64596B909BBD5 /* Comfortaa-Regular.ttf */,
+				B64A8844D7C34EB4B4A48398 /* Comfortaa-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +114,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				32E5542755FA4F7E81670DFB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -204,6 +228,11 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 				8699F5FEE7864C0D60866EF4 /* PrivacyInfo.xcprivacy in Resources */,
+				B1EAB935E86A4BECBEE18760 /* Comfortaa-Bold.ttf in Resources */,
+				963A7A5B7D6E49A3958B037A /* Comfortaa-Light.ttf in Resources */,
+				3A28133FEB44457E8A2D4E6B /* Comfortaa-Medium.ttf in Resources */,
+				07A9B10300B0404DBB4B05F7 /* Comfortaa-Regular.ttf in Resources */,
+				4110175FE3C6447B9AECA362 /* Comfortaa-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +392,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.RNExpoBoilerplate;
-				PRODUCT_NAME = RNExpoBoilerplate;
+				PRODUCT_NAME = "ExpoBoilerplate";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNExpoBoilerplate/RNExpoBoilerplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -391,7 +420,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.RNExpoBoilerplate;
-				PRODUCT_NAME = RNExpoBoilerplate;
+				PRODUCT_NAME = "ExpoBoilerplate";
 				SWIFT_OBJC_BRIDGING_HEADER = "RNExpoBoilerplate/RNExpoBoilerplate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

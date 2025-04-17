@@ -1,7 +1,7 @@
 import { Button, StyleSheet } from "react-native";
 import React from "react";
 import { Header, Text, View } from "@/components";
-import useAuthStore from "@/store/authStore";
+import useAuthStore from "@/stores/authStore";
 
 const Home = () => {
   const { setIsLogin } = useAuthStore();
