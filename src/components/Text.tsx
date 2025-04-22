@@ -1,8 +1,9 @@
 import { Text as RNText, type TextProps, StyleSheet } from "react-native";
 
 import { useTheme } from "@/hooks/useTheme";
+import { createStyleSheet } from "@/hooks/useStyles";
 
-export type ThemedTextProps = TextProps & {
+export type Props = TextProps & {
   lightColor?: string;
   darkColor?: string;
   type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
@@ -14,8 +15,9 @@ function Text({
   darkColor,
   type = "default",
   ...rest
-}: ThemedTextProps) {
+}: Props) {
   const color = useTheme({ light: lightColor, dark: darkColor }, "text");
+  const styles = useStyles();
 
   return (
     <RNText
@@ -33,7 +35,7 @@ function Text({
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = createStyleSheet((theme) => ({
   default: {
     fontSize: 16,
     lineHeight: 24,
@@ -42,18 +44,15 @@ const styles = StyleSheet.create({
   defaultSemiBold: {
     fontSize: 16,
     lineHeight: 24,
-    // fontWeight: "600",
     fontFamily: "Comfortaa-SemiBold",
   },
   title: {
     fontSize: 32,
-    // fontWeight: "bold",
     lineHeight: 32,
     fontFamily: "Comfortaa-Bold",
   },
   subtitle: {
     fontSize: 20,
-    // fontWeight: "bold",
     fontFamily: "Comfortaa-Medium",
   },
   link: {
@@ -62,6 +61,6 @@ const styles = StyleSheet.create({
     color: "#0a7ea4",
     fontFamily: "Comfortaa-Regular",
   },
-});
+}));
 
 export default Text;

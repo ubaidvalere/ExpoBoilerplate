@@ -1,7 +1,8 @@
-import { Button, StyleSheet } from "react-native";
+import { Button } from "react-native";
 import React from "react";
-import { Header, Text, View } from "@/components";
+import { Header, View } from "@/components";
 import useAuthStore from "@/stores/authStore";
+import { Monicon } from "@monicon/native";
 
 const Home = () => {
   const { setIsLogin } = useAuthStore();
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <View style={{ flex: 1 }}>
       <Header title="Home" hideBack />
+      <Monicon name="hugeicons:profile" size={25} color="black" />
       <Button title="Logout" onPress={() => setIsLogin(false)} />
     </View>
   );
@@ -16,4 +18,3 @@ const Home = () => {
 
 export default Home;
 
-const styles = StyleSheet.create({});

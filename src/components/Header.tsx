@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Text from "./Text";
 import View from "./View";
 import { useNavigation } from "@react-navigation/native";
+import { useTheme } from "@/hooks/useTheme";
+import { createStyleSheet } from "@/hooks/useStyles";
 
 interface HeaderProps {
   title: string;
@@ -14,6 +16,7 @@ interface HeaderProps {
 const Header = ({ title, hideBack, rightComponent }: HeaderProps) => {
   const { top } = useSafeAreaInsets();
   const navigation = useNavigation();
+  const styles = useStyles();
 
   return (
     <>
@@ -37,7 +40,7 @@ const Header = ({ title, hideBack, rightComponent }: HeaderProps) => {
 
 export default Header;
 
-const styles = StyleSheet.create({
+const useStyles = createStyleSheet((theme) => ({
   container: {
     flexDirection: "row",
     alignItems: "center",
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
     height: 45,
     paddingHorizontal: 15,
     borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    borderBottomColor: theme.border,
   },
   leftComponent: {
     flex: 1,
@@ -62,4 +65,4 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 17,
   },
-});
+}));
