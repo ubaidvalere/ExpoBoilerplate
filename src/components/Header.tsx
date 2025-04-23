@@ -1,10 +1,9 @@
-import React, { useMemo } from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { TouchableOpacity } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Text from "./Text";
 import View from "./View";
 import { useNavigation } from "@react-navigation/native";
-import { useTheme } from "@/hooks/useTheme";
 import { createStyleSheet } from "@/hooks/useStyles";
 
 interface HeaderProps {

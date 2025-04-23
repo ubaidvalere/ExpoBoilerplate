@@ -1,7 +1,7 @@
-import { Text as RNText, type TextProps, StyleSheet } from "react-native";
-
+import { Text as RNText, type TextProps } from "react-native";
 import { useTheme } from "@/hooks/useTheme";
 import { createStyleSheet } from "@/hooks/useStyles";
+import fonts from "@/constants/font";
 
 export type Props = TextProps & {
   lightColor?: string;
@@ -38,28 +38,28 @@ function Text({
 const useStyles = createStyleSheet((theme) => ({
   default: {
     fontSize: 16,
-    lineHeight: 24,
-    fontFamily: "Comfortaa-Regular",
+    // lineHeight: 24,
+    fontFamily: fonts.regular,
   },
   defaultSemiBold: {
     fontSize: 16,
-    lineHeight: 24,
-    fontFamily: "Comfortaa-SemiBold",
+    // lineHeight: 24,
+    fontFamily: fonts.semiBold,
   },
   title: {
     fontSize: 32,
-    lineHeight: 32,
-    fontFamily: "Comfortaa-Bold",
+    // lineHeight: 32,
+    fontFamily: fonts.bold,
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: "Comfortaa-Medium",
+    fontFamily: fonts.medium,
   },
   link: {
-    lineHeight: 30,
+    // lineHeight: 30,
     fontSize: 16,
-    color: "#0a7ea4",
-    fontFamily: "Comfortaa-Regular",
+    color: theme.link,
+    fontFamily: fonts.regular,
   },
 }));
 

@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../screens/app/Home";
+import Tabs from "./Tabs";
 
 const AppStack = createNativeStackNavigator({
   screens: {
-    Home: Home,
+    Tab: Tabs,
   },
   screenOptions: {
     headerShown: false,

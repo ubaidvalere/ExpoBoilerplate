@@ -13,6 +13,7 @@ export const colors = {
     border: "#cbcdd1",
     white: "#fff",
     colorScheme: "light",
+    link: "#0a7ea4",
   },
   dark: {
     primaryColor,
@@ -25,5 +26,6 @@ export const colors = {
     border: "#2B2F31",
     white: "#fff",
     colorScheme: "dark",
+    link: "#0a7ea4",
   },
 };

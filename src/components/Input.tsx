@@ -1,7 +1,8 @@
-import React from 'react';
-import { TextInput, TextInputProps } from 'react-native';
-import { useTheme } from '@/hooks/useTheme';
-import { createStyleSheet } from '@/hooks/useStyles';
+import React from "react";
+import { TextInput, TextInputProps } from "react-native";
+import { useTheme } from "@/hooks/useTheme";
+import { createStyleSheet } from "@/hooks/useStyles";
+import fonts from "@/constants/font";
 
 export type InputProps = TextInputProps & {
   lightColor?: string;
@@ -11,13 +12,16 @@ export type InputProps = TextInputProps & {
 const Input = ({ style, lightColor, darkColor, ...rest }: InputProps) => {
   const themeColors = useTheme();
   const styles = useStyles();
-  
+
   return (
     <TextInput
       style={[
         styles.input,
         {
-          backgroundColor: useTheme({ light: lightColor, dark: darkColor }, 'background'),
+          backgroundColor: useTheme(
+            { light: lightColor, dark: darkColor },
+            "background"
+          ),
           borderColor: themeColors.border, // Using the theme object directly
           color: themeColors.text,
         },
@@ -35,7 +39,7 @@ const useStyles = createStyleSheet((theme) => ({
     paddingHorizontal: 15,
     borderWidth: 1,
     borderRadius: 8,
-    fontFamily: 'Comfortaa-Regular',
+    fontFamily: fonts.regular,
     backgroundColor: theme.background,
     borderColor: theme.border,
     color: theme.text,

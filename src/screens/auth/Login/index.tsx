@@ -1,7 +1,15 @@
 import { Alert, StyleSheet, Image } from "react-native";
 import React, { useState } from "react";
 import useAuthStore from "@/stores/authStore";
-import { View, Text, Header, Input, Button, Spacer } from "@/components";
+import {
+  View,
+  Text,
+  Header,
+  Input,
+  Button,
+  Spacer,
+  Container,
+} from "@/components";
 
 const Login = () => {
   const { setIsLogin } = useAuthStore();
@@ -18,22 +26,16 @@ const Login = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <Header title="Login" hideBack />
-      <View style={styles.inputContainer}>
-        <Spacer height={20} />
+    <Container topInsets>
+      <View style={{ padding: 20 }}>
+        <Spacer height={80} />
 
         <Image
           source={require("@/assets/images/app-icon.png")}
-          style={{
-            height: 70,
-            width: 70,
-            borderRadius: 20,
-            alignSelf: "center",
-          }}
+          style={styles.logo}
         />
 
-        <Spacer height={20} />
+        <Spacer height={80} />
 
         <Input
           placeholder="Email"
@@ -41,28 +43,29 @@ const Login = () => {
           autoCapitalize="none"
           onChangeText={setEmail}
         />
-        <Spacer height={10} />
+        <Spacer height={20} />
 
         <Input
           placeholder="Password"
           secureTextEntry
           onChangeText={setPassword}
         />
+
+        <Spacer height={40} />
+
+        <Button title="Login" loading={isLoading} onPress={handleLogin} />
       </View>
-
-      <Spacer height={20} />
-
-      <Button title="Login" loading={isLoading} onPress={handleLogin} />
-    </View>
+    </Container>
   );
 };
 
 export default Login;
 
 const styles = StyleSheet.create({
-  inputContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    gap: 10,
+  logo: {
+    height: 70,
+    width: 70,
+    borderRadius: 20,
+    alignSelf: "center",
   },
 });

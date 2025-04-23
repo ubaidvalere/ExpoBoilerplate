@@ -18,7 +18,7 @@ const useAuthStore = create<State>()(
       setToken: (token: string) => set({ token }),
     }),
     {
-      name: "app-storage",
+      name: "auth-storage",
       storage: createJSONStorage(() => zustandStorage),
     }
   )
