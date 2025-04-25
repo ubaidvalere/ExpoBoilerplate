@@ -1,7 +1,9 @@
 import useAuthStore from "@/stores/authStore";
 import axios from "axios";
 
-const baseURL = "https://dummyjson.com";
+const baseURL = process.env.EXPO_PUBLIC_BASE_URL;
+
+console.log("baseURL", baseURL);
 
 const apiClient = axios.create({
   baseURL,
@@ -35,11 +37,13 @@ apiClient.interceptors.response.use(
         const response = await axios.post(`${baseURL}/auth/refresh`, {
           refreshToken,
         });
-        const { token } = response.data;
+        const { accessToken, refreshToken: newRefreshToken } = response.data;
 
-        useAuthStore.getState().setAccessToken(token);
+        useAuthStore.getState().setAccessToken(accessToken);
+        useAuthStore.getState().setRefreshToken(newRefreshToken);
 
-        originalRequest.headers.Authorization = `Bearer ${token}`;
+        originalRequest.headers.Authorization = `Bearer ${accessToken}`;
+
         return apiClient(originalRequest);
       } catch (refreshError) {
         // Handle refresh token failure (e.g., logout user)
