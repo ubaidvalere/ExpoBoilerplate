@@ -9,8 +9,8 @@ const Login = () => {
   const { setIsLogin, setAccessToken, setRefreshToken } = useAuthStore();
   const { setUserData } = useAppStore();
   const loginAPI = useLogin();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("emilys");
+  const [password, setPassword] = useState("emilyspass");
 
   const handleLogin = () => {
     if (username === "" || password === "") {
@@ -50,6 +50,7 @@ const Login = () => {
           placeholder="Username"
           autoCapitalize="none"
           onChangeText={setUsername}
+          value={username}
         />
         <Spacer height={20} />
 
@@ -57,6 +58,7 @@ const Login = () => {
           placeholder="Password"
           secureTextEntry
           onChangeText={setPassword}
+          value={password}
         />
 
         <Spacer height={40} />
