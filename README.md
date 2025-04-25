@@ -31,6 +31,11 @@ A modern and feature-rich React Native boilerplate using Expo, designed to kicks
 - 💾 MMKV for efficient storage
 - 🔍 Monicon for icon management
 
+## Upcoming Features
+
+- 📱 Push Notification
+- 📱 Error Handling
+
 ## Getting Started
 
 ### Prerequisites
