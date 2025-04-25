@@ -3,6 +3,7 @@ const tintColorDark = "#fff";
 
 export const colors = {
   light: {
+    colorScheme: "light",
     primaryColor,
     text: "#11181C",
     background: "#fff",
@@ -12,10 +13,11 @@ export const colors = {
     tabIconSelected: primaryColor,
     border: "#cbcdd1",
     white: "#fff",
-    colorScheme: "light",
     link: "#0a7ea4",
+    grayBG: "#f7f7f7",
   },
   dark: {
+    colorScheme: "dark",
     primaryColor,
     text: "#ECEDEE",
     background: "#151718",
@@ -25,7 +27,7 @@ export const colors = {
     tabIconSelected: tintColorDark,
     border: "#2B2F31",
     white: "#fff",
-    colorScheme: "dark",
     link: "#0a7ea4",
+    grayBG: "#2B2F31",
   },
 };

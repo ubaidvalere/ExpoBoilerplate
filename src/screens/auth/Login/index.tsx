@@ -1,28 +1,37 @@
 import { Alert, StyleSheet, Image } from "react-native";
 import React, { useState } from "react";
 import useAuthStore from "@/stores/authStore";
-import {
-  View,
-  Text,
-  Header,
-  Input,
-  Button,
-  Spacer,
-  Container,
-} from "@/components";
+import { View, Input, Button, Spacer, Container } from "@/components";
+import { useLogin } from "@/api/queries/useAuthQueries";
+import useAppStore from "@/stores/appStore";
 
 const Login = () => {
-  const { setIsLogin } = useAuthStore();
-  const [email, setEmail] = useState("");
+  const { setIsLogin, setAccessToken, setRefreshToken } = useAuthStore();
+  const { setUserData } = useAppStore();
+  const loginAPI = useLogin();
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = () => {
-    if (email === "" || password === "") {
+    if (username === "" || password === "") {
       Alert.alert("Error", "Please fill in all fields");
       return;
     }
-    setIsLogin(true);
+    loginAPI.mutate(
+      { username, password },
+      {
+        onSuccess: (data) => {
+          setIsLogin(true);
+          setAccessToken(data.token);
+          setRefreshToken(data.refreshToken);
+          setUserData(data);
+        },
+        onError: (error) => {
+          console.log(error);
+        },
+      }
+    );
+    // setIsLogin(true);
   };
 
   return (
@@ -38,10 +47,9 @@ const Login = () => {
         <Spacer height={80} />
 
         <Input
-          placeholder="Email"
-          keyboardType="email-address"
+          placeholder="Username"
           autoCapitalize="none"
-          onChangeText={setEmail}
+          onChangeText={setUsername}
         />
         <Spacer height={20} />
 
@@ -53,7 +61,11 @@ const Login = () => {
 
         <Spacer height={40} />
 
-        <Button title="Login" loading={isLoading} onPress={handleLogin} />
+        <Button
+          title="Login"
+          loading={loginAPI.isPending}
+          onPress={handleLogin}
+        />
       </View>
     </Container>
   );

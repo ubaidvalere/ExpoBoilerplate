@@ -5,8 +5,10 @@ import zustandStorage from "@/utils/zustandStorage";
 interface State {
   isLogin: boolean;
   setIsLogin: (isLogin: boolean) => void;
-  token: string;
-  setToken: (token: string) => void;
+  accessToken: string;
+  setAccessToken: (token: string) => void;
+  refreshToken: string;
+  setRefreshToken: (token: string) => void;
 }
 
 const useAuthStore = create<State>()(
@@ -14,8 +16,10 @@ const useAuthStore = create<State>()(
     (set) => ({
       isLogin: false,
       setIsLogin: (isLogin: boolean) => set({ isLogin }),
-      token: "",
-      setToken: (token: string) => set({ token }),
+      accessToken: "",
+      setAccessToken: (token: string) => set({ accessToken: token }),
+      refreshToken: "",
+      setRefreshToken: (token: string) => set({ refreshToken: token }),
     }),
     {
       name: "auth-storage",
