@@ -33,7 +33,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>exp+expoboilerplate</string>
+          <string>exp+expo-boilerplate</string>
         </array>
       </dict>
     </array>

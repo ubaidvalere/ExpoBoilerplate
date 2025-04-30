@@ -64,6 +64,21 @@ function TabBar({ state, descriptors, navigation }) {
             color={isFocused ? theme.tint : theme.icon}
           />
         );
+
+      case "Chat":
+        return isFocused ? (
+          <Monicon
+            name="solar:chat-line-bold"
+            size={25}
+            color={isFocused ? theme.tint : theme.icon}
+          />
+        ) : (
+          <Monicon
+            name="solar:chat-line-linear"
+            size={25}
+            color={isFocused ? theme.tint : theme.icon}
+          />
+        );
       default:
         return (
           <Monicon
@@ -111,6 +126,7 @@ function TabBar({ state, descriptors, navigation }) {
 
         return (
           <PlatformPressable
+            android_ripple={null}
             key={route.key}
             href={buildHref(route.name, route.params)}
             accessibilityState={isFocused ? { selected: true } : {}}
@@ -128,7 +144,7 @@ function TabBar({ state, descriptors, navigation }) {
           >
             {getIcon(route.name, isFocused)}
             <Spacer height={5} />
-            <Text style={styles.tabLable(isFocused)}>{label}</Text>
+            <Text style={styles.tabLabel(isFocused)}>{label}</Text>
           </PlatformPressable>
         );
       })}
@@ -152,7 +168,7 @@ const useStyles = createStyleSheet((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  tabLable: (isFocused) => ({
+  tabLabel: (isFocused) => ({
     color: isFocused ? theme.tint : theme.text,
     fontFamily: fonts.semiBold,
     fontSize: 13,

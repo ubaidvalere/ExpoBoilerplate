@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Expo Boilerplate",
-    "slug": "Expo Boilerplate",
+    "slug": "expo-boilerplate",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/app-icon.png",
@@ -46,6 +46,14 @@
             "backgroundColor": "#000000"
           },
           "imageWidth": 200
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
         }
       ]
     ]

@@ -25,9 +25,7 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.anonymous.RNExpoBoilerplate"/>
-        <data android:scheme="exp+rnexpoboilerplate"/>
-        <data android:scheme="exp+expo"/>
-        <data android:scheme="exp+expoboilerplate"/>
+        <data android:scheme="exp+expo-boilerplate"/>
       </intent-filter>
     </activity>
   </application>
