@@ -15,6 +15,9 @@ const configWithMonicon = withMonicon(config, {
     "solar:chat-line-linear",
     "solar:chat-line-bold",
     "hugeicons:arrow-right-double",
+    "solar:trash-bin-trash-linear",
+    "solar:cart-3-bold",
+    "solar:cart-3-linear",
   ],
 });
 

@@ -31,6 +31,7 @@ const generateMockMessages = (count, startId = 0) => {
 };
 
 const ChatScreen = () => {
+  const styles = useStyles();
   const [messages, setMessages] = useState(
     generateMockMessages(MESSAGE_PAGE_SIZE, 0)
   );
@@ -152,6 +153,7 @@ const ChatScreen = () => {
           />
         }
       />
+      <View style={styles.test(true)} />
     </Container>
   );
 };
@@ -161,6 +163,9 @@ const useStyles = createStyleSheet(() => ({
     paddingVertical: 15,
     alignItems: "center",
   },
+  test: (isOn: boolean) => ({
+    backgroundColor: isOn ? "red" : "blue",
+  }),
 }));
 
 export default ChatScreen;

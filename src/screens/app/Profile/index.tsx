@@ -5,6 +5,8 @@ import { Button, Container, Spacer, Text, View } from "@/components";
 import useAuthStore from "@/stores/authStore";
 import { useUser } from "@/api/queries/useUserQueries";
 import { createStyleSheet } from "@/hooks/useStyles";
+import { NestedScrollView, NestedScrollViewHeader } from "@sdcx/nested-scroll";
+import PagerView from "react-native-pager-view";
 
 const Profile = () => {
   const styles = useStyles();
@@ -13,7 +15,18 @@ const Profile = () => {
 
   return (
     <Container topInsets>
-      <ScrollView>
+      <NestedScrollView>
+        <NestedScrollViewHeader stickyHeaderBeginIndex={1}>
+          <Image />
+          <Text>Hello</Text>
+        </NestedScrollViewHeader>
+        <PagerView>
+          <View style={{ flex: 1, backgroundColor: "green" }}></View>
+          <View style={{ flex: 1, backgroundColor: "green" }}></View>
+          <View style={{ flex: 1, backgroundColor: "green" }}></View>
+        </PagerView>
+      </NestedScrollView>
+      {/* <ScrollView>
         <View style={{ padding: 20 }}>
           <Text type="title">Profile</Text>
 
@@ -43,7 +56,7 @@ const Profile = () => {
 
           <Button title="Logout" onPress={() => setIsLogin(false)} />
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </Container>
   );
 };

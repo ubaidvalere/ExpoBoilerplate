@@ -65,6 +65,21 @@ function TabBar({ state, descriptors, navigation }) {
           />
         );
 
+      case "Cart":
+        return isFocused ? (
+          <Monicon
+            name="solar:cart-3-bold"
+            size={25}
+            color={isFocused ? theme.tint : theme.icon}
+          />
+        ) : (
+          <Monicon
+            name="solar:cart-3-linear"
+            size={25}
+            color={isFocused ? theme.tint : theme.icon}
+          />
+        );
+
       case "Chat":
         return isFocused ? (
           <Monicon

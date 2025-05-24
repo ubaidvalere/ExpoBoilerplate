@@ -20,35 +20,33 @@ export type StyleObject<T> = {
 export type StyleCreator<T = ThemeType> = (theme: T) => StyleObject<any>;
 
 export type ProcessedStyles<T> = {
-  [P in keyof T]: T[P] extends DynamicStyleFn<infer Args>
-    ? (...args: Args) => ViewStyle | TextStyle | ImageStyle
-    : T[P];
+  [P in keyof T]: T[P] extends (...args: any[]) => any
+    ? T[P]
+    : T[P] extends ViewStyle | TextStyle | ImageStyle
+    ? T[P]
+    : never;
 };
 
-export function createStyleSheet<T extends NamedStyles<T> | NamedStyles<any>>(
-  styleFactory: (theme: ThemeType) => T | StyleObject<T>
+export function createStyleSheet<T extends Record<string, any>>(
+  styleFactory: (theme: ThemeType) => T
 ): () => ProcessedStyles<T> {
   return function useComponentStyles(): ProcessedStyles<T> {
     const theme = useTheme();
-
     const styles = useMemo(() => {
       const rawStyles = styleFactory(theme);
       const processedStyles: Partial<ProcessedStyles<T>> = {};
-
       Object.keys(rawStyles).forEach((key) => {
-        const styleKey = key as keyof T;
-        if (typeof rawStyles[styleKey] === "function") {
-          processedStyles[styleKey] = rawStyles[styleKey] as any;
+        const value = rawStyles[key];
+        if (typeof value === "function") {
+          processedStyles[key as keyof T] = value;
         } else {
-          processedStyles[styleKey] = StyleSheet.create({
-            [key]: rawStyles[styleKey],
-          })[key] as any;
+          processedStyles[key as keyof T] = StyleSheet.create({ [key]: value })[
+            key
+          ];
         }
       });
-
       return processedStyles as ProcessedStyles<T>;
     }, [theme]);
-
     return styles;
   };
 }
